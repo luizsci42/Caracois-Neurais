@@ -45,7 +45,7 @@ public class Postagem {
 	// @ManyToOne(cascade=CascadeType.ALL)
 	// private Pagina pagina;
 	
-	// Criamos uma tabela com strings que serão utilizados como tags
+	// Criamos uma tabela com strings que serï¿½o utilizados como tags
 	// @ElementCollection @Column(length=20)
 	// private List<String> tags;
 
@@ -58,9 +58,9 @@ public class Postagem {
 	
 	public void setId(int id) { this.id = id; }
 	
-	/* Utilizamos a anotação Lob para indicar que o método pode
+	/* Utilizamos a anotaï¿½ï¿½o Lob para indicar que o mï¿½todo pode
 	 * retornar um objeto grande (Large OBject).
-	 * Utilizamos a anotação Basic para garantir o Lazy Loading.  
+	 * Utilizamos a anotaï¿½ï¿½o Basic para garantir o Lazy Loading.  
 	 */
 	@Lob @Basic(fetch=FetchType.LAZY)
 	public String getConteudo() { return conteudo; }

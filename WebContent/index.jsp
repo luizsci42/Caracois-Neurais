@@ -50,7 +50,7 @@
 							<div class="w3-container w3-white" id="post_content" onclick="requestPost()">
 								<h1 class="titulo">Nenhuma Postagem</h1>
 								<p>
-									<a href="novaPostagem.xhtml">Nova Postagem</a>
+									<a href="restrito/novaPostagem.xhtml">Nova Postagem</a>
 								</p>
 							</div>
 							</div>
