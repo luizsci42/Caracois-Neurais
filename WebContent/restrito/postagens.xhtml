@@ -8,7 +8,6 @@
 
 <h:body>
     <!-- Exibição padrão -->
-    <!--
     <h:form>
         <h:dataTable value="#{postagemBean.postagens}"
                      var="post" border="1">
@@ -24,45 +23,6 @@
                 <h:commandLink action="{postagemBean.excluir(post)}">Excluir</h:commandLink>
             </h:column>
         </h:dataTable>
-    </h:form>
-    -->
-
-    <!-- Paginação virtual -->
-    <!--
-    <h:form>
-        <p:dataTable value="#{postagemBean.postagens}" var="post"
-                     border="1" paginator="true" rows="5">
-            <p:column>
-                <f:facet name="header">Titulo</f:facet>
-                #{post.titulo}
-            </p:column>
-            <p:column>
-                <f:facet name="header">Conteudo</f:facet>
-                #{post.conteudo}
-            </p:column>
-            <h:column>
-                <f:facet name="header">Opções</f:facet>
-            </h:column>
-        </p:dataTable>
-    </h:form>
-    -->
-    <!-- Paginação real -->
-    <h:form>
-        <p:dataTable value="#{postagemBean.postagensLazyDataModel}" var="post"
-                     paginator="true" rows="10" lazy="true">
-            <p:column>
-                <f:facet name="header">Titulo</f:facet>
-                #{post.titulo}
-            </p:column>
-            <p:column>
-                <f:facet name="header">Conteúdo</f:facet>
-                #{post.conteudo}
-            </p:column>
-            <p:column>
-                <f:facet name="header">Opções</f:facet>
-                <p:commandButton action="#{postagemBean.excluir()}" value="Excluir" />
-            </p:column>
-        </p:dataTable>
     </h:form>
 </h:body>
 </html>
