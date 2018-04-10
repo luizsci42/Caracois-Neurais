@@ -7,22 +7,22 @@
 </h:head>
 
 <h:body>
-    <!-- Exibição padrão -->
+    <!-- Paginação virtual -->
     <h:form>
-        <h:dataTable value="#{postagemBean.postagens}"
-                     var="post" border="1">
-            <h:column>
+        <p:dataTable value="#{postagemBean.postagens}" var="post"
+                     border="1" paginator="true" rows="5">
+            <p:column>
                 <f:facet name="header">Titulo</f:facet>
                 #{post.titulo}
-            </h:column>
-            <h:column>
+            </p:column>
+            <p:column>
                 <f:facet name="header">Conteudo</f:facet>
                 #{post.conteudo}
-            </h:column>
+            </p:column>
             <h:column>
-                <h:commandLink action="{postagemBean.excluir(post)}">Excluir</h:commandLink>
+                <f:facet name="header">Opções</f:facet>
             </h:column>
-        </h:dataTable>
+        </p:dataTable>
     </h:form>
 </h:body>
 </html>
