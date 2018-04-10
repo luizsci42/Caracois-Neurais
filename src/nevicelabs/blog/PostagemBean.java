@@ -19,6 +19,8 @@ public class PostagemBean {
 
 	public Postagem getPostagem(int id) { return dao.getPostagem(id); }
 
+	public Postagem getPostagem() { return this.postagem; }
+
 	public void setPostagem(Postagem post) { this.postagem = post; }
 
 	// TODO: Remover getter e setters do PostagemDAO. São inúteis

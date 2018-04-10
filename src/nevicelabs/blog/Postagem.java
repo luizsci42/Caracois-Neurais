@@ -58,9 +58,9 @@ public class Postagem {
 	
 	public void setId(int id) { this.id = id; }
 	
-	/* Utilizamos a anota��o Lob para indicar que o m�todo pode
+	/* Utilizamos a anotação Lob para indicar que o método pode
 	 * retornar um objeto grande (Large OBject).
-	 * Utilizamos a anota��o Basic para garantir o Lazy Loading.  
+	 * Utilizamos a anotação Basic para garantir o Lazy Loading.
 	 */
 	@Lob @Basic(fetch=FetchType.LAZY)
 	public String getConteudo() { return conteudo; }
