@@ -1,5 +1,7 @@
 package nevicelabs.blog;
 
+import org.primefaces.model.LazyDataModel;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -10,7 +12,7 @@ public class PostagemDAO {
 
 	private EntityManager gerenciador = JPAUtil.getEntityManager();
 	private List<Postagem> postagens;
-	private List<Postagem> postagensLazyDataModel;
+	private LazyDataModel<Postagem> postagensLazyDataModel;
 
 	public void adicionar(Postagem post) {
 		gerenciador.getTransaction().begin();
@@ -49,11 +51,11 @@ public class PostagemDAO {
 	 * @param numPagina O número da página a ser consultada
 	 * @return As postagens referentes à página
      */
-	 public List<Postagem> getPostagensLazyDataModel() {
+	 public LazyDataModel<Postagem> getPostagensLazyDataModel() {
 		if (postagensLazyDataModel == null) {
 			String jpql = "select p from Postagem p";
 			String count = "select count(p.id) from Postagem p";
-			postagensLazyDataModel = (List<Postagem>) new QueryDataModel<Postagem>(jpql, count);
+			postagensLazyDataModel = new QueryDataModel<Postagem>(jpql, count);
 		}
 		return postagensLazyDataModel;
 	}

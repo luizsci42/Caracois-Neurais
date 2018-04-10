@@ -1,5 +1,7 @@
 package nevicelabs.blog;
 
+import org.primefaces.model.LazyDataModel;
+
 import javax.faces.bean.ManagedBean;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class PostagemBean {
 
 	public List<Postagem> getPostagens() { return dao.getPostagens(); }
 
-	public List<Postagem> getPostagensLazyDataModel() { return dao.getPostagensLazyDataModel(); }
+	public LazyDataModel<Postagem> getPostagensLazyDataModel() { return dao.getPostagensLazyDataModel(); }
 
 	public Postagem getPostagem(int id) { return dao.getPostagem(id); }
 

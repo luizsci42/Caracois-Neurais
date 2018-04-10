@@ -21,7 +21,12 @@ public class QueryDataModel<T> extends LazyDataModel<T> {
 
     @Override
     public List<T> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters) {
-        List<T> resultado = JPAUtil.getEntityManager().createQuery(jpql).setFirstResult(first).setMaxResults(pageSize).getResultList();
+        List<T> resultado = JPAUtil
+                        .getEntityManager()
+                        .createQuery(jpql)
+                        .setFirstResult(first)
+                        .setMaxResults(pageSize)
+                        .getResultList();
         return resultado;
     }
 }
