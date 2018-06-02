@@ -40,7 +40,7 @@
 				int id = Integer.parseInt(postId);
 				PostagemBean bean = new PostagemBean();
 
-				Postagem post = bean.exibirPostagem(id);
+				Postagem post = bean.getPostagem(id);
 
 				String titulo = post.getTitulo();
 				String conteudo = post.getConteudo();
@@ -72,7 +72,10 @@
 							<b>Luiz Felipe Souza</b>
 						</h4>
 						<p>
-							Sabe, sempre fui uma criança estranha | Estudante de Ciência da Computação; louco já sou, só me falta ser cientista. Welcome to my weird little world.
+							Sabe, sempre fui uma criança estranha |
+							Estudante de Ciência da Computação; louco já sou,
+							só me falta ser cientista.
+							Welcome to my weird little world.
 						</p>
 					</div>
 				</div>

@@ -4,9 +4,7 @@
 
 <%@ page import="nevicelabs.blog.Postagem" %>
 <%@ page import="nevicelabs.blog.PostagemBean" %>
-<%@ page import="nevicelabs.blog.PostagemDAO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 
 <!DOCTYPE html>
 <html>
@@ -50,7 +48,7 @@
 							<div class="w3-container w3-white" id="post_content" onclick="requestPost()">
 								<h1 class="titulo">Nenhuma Postagem</h1>
 								<p>
-									<a href="novaPostagem.xhtml">Nova Postagem</a>
+									<a href="restrito/novaPostagem.xhtml">Nova Postagem</a>
 								</p>
 							</div>
 							</div>
@@ -89,7 +87,9 @@
 							<b>Luiz Felipe Souza</b>
 						</h4>
 						<p>
-							Sabe, sempre fui uma criança estranha | Estudante de Ciência da Computação; louco já sou, só me falta ser cientista. Welcome to my weird little world.
+							Sabe, sempre fui uma criança estranha
+							| Estudante de Ciência da Computação; louco já sou,
+							só me falta ser cientista. Welcome to my weird little world.
 						</p>
 					</div>
 				</div>

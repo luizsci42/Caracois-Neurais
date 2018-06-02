@@ -1,1 +1,1 @@
-Projeto de blog pessoal utilizando Java JPA no back end e JSP com Bootstrap no front. Farei uma nova versão utilizando o framework PHP, Laravel.
+Projeto de blog pessoal Java Fullstack. Estou utilzando JSP, JSF, PrimeFaces e Bootstrap paara o front end e JPA / Hibernate no back.

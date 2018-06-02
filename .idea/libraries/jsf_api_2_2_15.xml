@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jsf-api-2.2.15">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/Java JSF e JSP/jsf-api-2.2.15.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Java JSF e JSP/jsf-impl-2.2.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/Java JSF e JSP/primefaces-6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

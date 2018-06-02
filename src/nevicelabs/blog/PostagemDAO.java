@@ -1,16 +1,18 @@
 package nevicelabs.blog;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.primefaces.model.LazyDataModel;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PostagemDAO {
 
 	private EntityManager gerenciador = JPAUtil.getEntityManager();
 	private List<Postagem> postagens;
+	private LazyDataModel<Postagem> postagensLazyDataModel;
 
 	public void adicionar(Postagem post) {
 		gerenciador.getTransaction().begin();
@@ -19,35 +21,42 @@ public class PostagemDAO {
 		gerenciador.close();
 	}
 
+	public void excluir(Postagem post) {
+	    EntityTransaction tx = gerenciador.getTransaction();
+	    tx.begin();
+	    post = gerenciador.merge(post);
+	    gerenciador.remove(post);
+	    tx.commit();
+	    gerenciador.close();
+    }
+
+	public Postagem getPostagem(int id) {
+		Postagem post = gerenciador.find(Postagem.class, id);
+		return post;
+	}
+
 	@SuppressWarnings("unchecked")
 	public List<Postagem> getPostagens() {
-
 		if (postagens == null) {
 			Query q = gerenciador.createQuery("select p from Postagem p", Postagem.class);
 			postagens = new ArrayList<Postagem>();
 			postagens = q.getResultList();
-			gerenciador.close();
+			// gerenciador.close();
 		}
-
 		return postagens;
 	}
-	
-	// M�todo para pagina��o
-	 public List<Postagem> getPostagens(int numPagina) {
-		if (postagens == null) {
-			TypedQuery<Postagem> q = gerenciador.createQuery("select p from Postagem p", Postagem.class);
-			postagens = new ArrayList<Postagem>();
-			int tamanhoPagina = 10;
-			q.setMaxResults(tamanhoPagina);
-			postagens = q.setFirstResult(numPagina * tamanhoPagina).getResultList();
-			gerenciador.close();
-		}
 
-		return postagens;
-	}
-	
-	public Postagem getPostagem(int id) {
-		Postagem post = gerenciador.find(Postagem.class, id);
-		return post;
+    /**
+	 * Método para paginação real
+	 * @param numPagina O número da página a ser consultada
+	 * @return As postagens referentes à página
+     */
+	 public LazyDataModel<Postagem> getPostagensLazyDataModel() {
+		if (postagensLazyDataModel == null) {
+			String jpql = "select p from Postagem p";
+			String count = "select count(p.id) from Postagem p";
+			postagensLazyDataModel = new QueryDataModel<Postagem>(jpql, count);
+		}
+		return postagensLazyDataModel;
 	}
 }
