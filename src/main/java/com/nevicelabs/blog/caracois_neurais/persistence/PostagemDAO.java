@@ -53,7 +53,6 @@ public class PostagemDAO {
 
     /**
 	 * Método para paginação real
-	 * @param numPagina O número da página a ser consultada
 	 * @return As postagens referentes à página
      */
 	 public LazyDataModel<Postagem> getPostagensLazyDataModel() {
