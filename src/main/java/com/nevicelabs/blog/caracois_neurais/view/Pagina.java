@@ -1,4 +1,4 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.view;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.nevicelabs.blog.caracois_neurais.domain.Postagem;
 
 @ManagedBean
 public class Pagina {

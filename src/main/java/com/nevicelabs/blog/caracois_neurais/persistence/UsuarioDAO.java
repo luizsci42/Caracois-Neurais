@@ -1,6 +1,7 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.persistence;
 
 import javax.persistence.EntityManager;
+import com.nevicelabs.blog.caracois_neurais.util.JPAUtil;
 
 public class UsuarioDAO {
 

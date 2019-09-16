@@ -1,10 +1,12 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.business;
 
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
 
 import java.util.List;
 import java.util.Map;
+
+import com.nevicelabs.blog.caracois_neurais.util.JPAUtil;
 
 public class QueryDataModel<T> extends LazyDataModel<T> {
 

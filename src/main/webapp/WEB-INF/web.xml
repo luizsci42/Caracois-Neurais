@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context-param>
+    <param-name>javax.faces.CONFIG_FILES</param-name>
+    <param-value>
+        WEB-INF/faces-config.xml
+   </param-value>
+</context-param>

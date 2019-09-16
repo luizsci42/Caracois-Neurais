@@ -1,6 +1,8 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.domain;
 
 import org.primefaces.model.LazyDataModel;
+
+import com.nevicelabs.blog.caracois_neurais.persistence.PostagemDAO;
 
 import javax.faces.bean.ManagedBean;
 import java.util.List;
@@ -24,10 +26,5 @@ public class PostagemBean {
 	public Postagem getPostagem() { return this.postagem; }
 
 	public void setPostagem(Postagem post) { this.postagem = post; }
-
-	// TODO: Remover getter e setters do PostagemDAO. São inúteis
-	public PostagemDAO getPostagemDAO() { return this.dao; }
-	
-	public void setPostagemDAO(PostagemDAO dao) { this.dao = dao; }
 
 }

@@ -1,0 +1,22 @@
+body, h1, h2, h3, h4, h5 {
+	font-family: "Raleway", sans-serif;
+}
+
+p:not(.sub){
+	text-indent: 15px;
+	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+    /* Retira os pontos */
+    list-style-type: none;
+}
+
+.titulo {
+	border-bottom: 2px groove #333;
+	font-weight: bold;
+}

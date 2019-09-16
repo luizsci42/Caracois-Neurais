@@ -1,6 +1,7 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.domain;
 
 import javax.faces.bean.ManagedBean;
+import com.nevicelabs.blog.caracois_neurais.persistence.UsuarioDAO;
 
 @ManagedBean
 public class UsuarioBean {

@@ -1,4 +1,4 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

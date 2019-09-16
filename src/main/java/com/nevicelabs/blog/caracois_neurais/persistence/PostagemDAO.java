@@ -1,4 +1,4 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.persistence;
 
 import org.primefaces.model.LazyDataModel;
 
@@ -7,6 +7,10 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.nevicelabs.blog.caracois_neurais.util.JPAUtil;
+import com.nevicelabs.blog.caracois_neurais.domain.Postagem;
+import com.nevicelabs.blog.caracois_neurais.business.QueryDataModel;
 
 public class PostagemDAO {
 
@@ -38,7 +42,8 @@ public class PostagemDAO {
 	@SuppressWarnings("unchecked")
 	public List<Postagem> getPostagens() {
 		if (postagens == null) {
-			Query q = gerenciador.createQuery("select p from Postagem p", Postagem.class);
+			Query q = gerenciador.createQuery("select p from Postagem p");
+			// Query q = gerenciador.createQuery("select p from Postagem p", Postagem.class);
 			postagens = new ArrayList<Postagem>();
 			postagens = q.getResultList();
 			// gerenciador.close();

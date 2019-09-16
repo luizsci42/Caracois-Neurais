@@ -1,4 +1,4 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

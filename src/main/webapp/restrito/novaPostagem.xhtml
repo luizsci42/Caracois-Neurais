@@ -1,0 +1,14 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="1">
+				Título da postagem: <h:inputText value="#{postagemBean.postagem.titulo}"></h:inputText>
+				<h:inputTextarea row = "10" col = "10" 
+					value = "#{postagemBean.postagem.conteudo}" readonly = "false"/>
+				<h:commandButton value="Postar" action="#{postagemBean.salvar(postagemBean.postagem)}"/>
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</html>

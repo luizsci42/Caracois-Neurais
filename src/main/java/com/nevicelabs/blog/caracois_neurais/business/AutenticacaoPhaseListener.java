@@ -1,4 +1,4 @@
-package nevicelabs.blog;
+package com.nevicelabs.blog.caracois_neurais.business;
 
 import javax.faces.application.NavigationHandler;
 import javax.faces.context.FacesContext;
