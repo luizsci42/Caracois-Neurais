@@ -13,7 +13,7 @@ public class AutenticacaoPhaseListener implements PhaseListener {
 
     /**
      * Neste método definimos o que acontece após do carregamento da fase.
-     * @param phaseEvent
+     * @param phaseEvent Fase que será escutada pelo método
      */
     @Override
     public void afterPhase(PhaseEvent phaseEvent) {
@@ -32,7 +32,7 @@ public class AutenticacaoPhaseListener implements PhaseListener {
      * Neste método definimos o que acontece antes do carregamento da fase.
      * Como estamos monitorando a Restore View, não há pré-fase. Logo,
      * deixamos este método em branco.
-     * @param phaseEvent
+     * @param phaseEvent Fase que será escutada pelo método
      */
     @Override
     public void beforePhase(PhaseEvent phaseEvent) { }
